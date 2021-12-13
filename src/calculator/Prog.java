@@ -1,6 +1,6 @@
 package calculator;
 import java.lang.Float;
-import java.util.ArrayList;
+
 
 public class Prog {
     private float currentvalue;
@@ -65,30 +65,34 @@ public class Prog {
         if (op.contains(operator)) {
             if (operator.equals("+")) {
                 currentvalue = num1 + num2;
-                return currentvalue;
+
+                setMemoryValue(currentvalue);
 
 
 
             } else if (operator.equals("-")) {
                 currentvalue = num1 - num2;
-               return currentvalue;
+
+               setMemoryValue(currentvalue);
 
 
 
             } else if (operator.equals("*")) {
                 currentvalue = num1 * num2;
-                return currentvalue;
+
+                setMemoryValue(currentvalue);
 
 
             } else if (operator.equals("/")) {
                 currentvalue = num1 / num2;
-               return currentvalue;
+
+               setMemoryValue(currentvalue);
 
 
 
             } else {
                 return 0;
-            }
+            } return currentvalue;
 
 
 
@@ -115,7 +119,29 @@ public class Prog {
 
 
 
-    }}
+    }
+
+    public float getCurrentValue(){
+        return currentvalue;
+    }
+
+    public float getMemoryValue(){
+        return memval;
+    }
+
+    public void setMemoryValue(float memval){
+        this.memval = memval;
+    }
+
+    public void clearMemory(){
+        setMemoryValue(0);
+    }
+
+
+
+
+
+}
 
 
 
@@ -123,9 +149,6 @@ public class Prog {
 
 
 
-        //x1 = input.nextDouble();
-        //x2 = input.nextDouble(); // waits for next number
-
-
+   
 
 
