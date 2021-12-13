@@ -13,6 +13,21 @@ public class Main {
             if (formula.equals("off")){
                 System.exit(0);
             }
+            
+            
+            else if (formula.equals("mr")){
+               System.out.println(c.getMemoryValue());
+            }
+            else if (formula.equals("m")){
+                c.setMemoryValue(c.getMemoryValue());
+            }
+
+            else if(formula.equals("c")){
+                System.out.println("memory cleared");
+                c.clearMemory();
+            }
+
+            
 
             else {
 
